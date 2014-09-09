@@ -1,0 +1,16 @@
+>> mkdir /home/student
+>> touch /home/student/thesis.txt
+>> append /home/student/thesis.txt Hello World
+>> append /home/student/thesis.txt Abstract
+>> ls -t /home
+
+>> ls -s /
+
+>> ls -n /home/student
+-n: parameter not recognized for ls
+>> du /
+
+>> cat /home/student/thesis.txt
+
+>> pwd
+pwd: command not found

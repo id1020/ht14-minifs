@@ -1,0 +1,10 @@
+mkdir /home/student
+touch /home/student/thesis.txt
+append /home/student/thesis.txt Hello World
+append /home/student/thesis.txt Abstract
+ls -t /home
+ls -s /
+ls -n /home/student
+du /
+cat /home/student/thesis.txt
+pwd
