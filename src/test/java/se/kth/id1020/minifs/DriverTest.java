@@ -44,7 +44,7 @@ public class DriverTest extends TestCase {
   
   public void testMain() {
     FileSystem fs = new TestFs();
-    System.out.println(Driver.processCmdFile(fs, "/tmp/cmds.txt"));
+//    System.out.println(Driver.processCmdFile(fs, "/tmp/cmds.txt"));
   }
     
   public void testProcessCmd() {
