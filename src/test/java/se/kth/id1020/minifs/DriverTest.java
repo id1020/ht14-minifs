@@ -6,6 +6,7 @@
 
 package se.kth.id1020.minifs;
 
+import edu.princeton.cs.introcs.In;
 import junit.framework.TestCase;
 
 /**
@@ -44,7 +45,9 @@ public class DriverTest extends TestCase {
   
   public void testMain() {
     FileSystem fs = new TestFs();
-//    System.out.println(Driver.processCmdFile(fs, "/tmp/cmds.txt"));
+    String results = Driver.processCmdFile(fs, getClass().getResource("/cmds.txt").getPath());
+    In expectedResults = new In(getClass().getResource("/results.txt"));
+    assertEquals(results, expectedResults.readAll());
   }
     
   public void testProcessCmd() {
