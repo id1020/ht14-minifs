@@ -9,6 +9,8 @@ package se.kth.id1020.minifs;
  *
  */
 public class INodeDirectory extends INode {
+  
+  public LinkedList<INode> children = new LinkedList<INode>();
 
   public INodeDirectory(String name) {
     super(name);
