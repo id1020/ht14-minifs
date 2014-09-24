@@ -10,11 +10,11 @@ package se.kth.id1020.minifs;
  */
 public interface FileSystem {
 
-  public void mkdir(String path);
+  public String mkdir(String path);
   
-  public void touch(String path);
+  public String touch(String path);
   
-  public void append(String path, String data);
+  public String append(String path, String data);
   
   public String lsByTime(String path);
   
