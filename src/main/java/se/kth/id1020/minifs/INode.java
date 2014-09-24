@@ -23,8 +23,8 @@ public abstract class INode {
     return accessTime;
   }
 
-  public void setAccessTime(long accessTime) {
-    this.accessTime = accessTime;
+  public void setAccessTime() {
+    this.accessTime = System.currentTimeMillis();;
   }
 
   public String getName() {
