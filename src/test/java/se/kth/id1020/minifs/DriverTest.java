@@ -7,6 +7,7 @@
 package se.kth.id1020.minifs;
 
 import edu.princeton.cs.introcs.In;
+import static junit.framework.Assert.assertEquals;
 import junit.framework.TestCase;
 
 /**
@@ -17,12 +18,15 @@ public class DriverTest extends TestCase {
   class TestFs implements FileSystem {
 
     public void mkdir(String path) {
+        return "";
     }
 
     public void touch(String path) {
+        return "";
     }
 
     public void append(String path, String data) {
+        return "";
     }
 
     public String lsByTime(String path) {
@@ -40,7 +44,7 @@ public class DriverTest extends TestCase {
     public String cat(String path) {
       return "";
     }
-    
+
   }
   
   public void testMain() {

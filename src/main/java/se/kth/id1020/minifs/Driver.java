@@ -44,30 +44,34 @@ public class Driver {
     
     String result = null;
 
-    if (cmd.equals("mkdir")) {
-      fs.mkdir(comp[1].trim());
-    } else if (cmd.equals("touch")) {
-      fs.touch(comp[1].trim());
-    } else if (cmd.equals("append")) {
-      String[] subComp = comp[1].split(" ", 2);
-      fs.append(subComp[0].trim(), subComp[1].trim());
-    } else if (cmd.equals("ls")) {
-      String[] subComp = comp[1].split(" ", 2);
-      String param = subComp[0].trim().toLowerCase();
-      String path = subComp[1].trim();
-      if (param.equals("-t")) {
-        result = fs.lsByTime(path);
-      } else if (param.equals("-s")) {
-        result = fs.lsByName(path);
+    try {
+      if (cmd.equals("mkdir")) {
+        fs.mkdir(comp[1].trim());
+      } else if (cmd.equals("touch")) {
+        fs.touch(comp[1].trim());
+      } else if (cmd.equals("append")) {
+        String[] subComp = comp[1].split(" ", 2);
+        fs.append(subComp[0].trim(), subComp[1].trim());
+      } else if (cmd.equals("ls")) {
+        String[] subComp = comp[1].split(" ", 2);
+        String param = subComp[0].trim().toLowerCase();
+        String path = subComp[1].trim();
+        if (param.equals("-t")) {
+          result = fs.lsByTime(path);
+        } else if (param.equals("-s")) {
+          result = fs.lsByName(path);
+        } else {
+          result = param + ": parameter not recognized for ls";
+        }
+      } else if (cmd.equals("du")) {
+        result = fs.du(comp[1].trim());
+      } else if (cmd.equals("cat")) {
+        result = fs.cat(comp[1].trim());
       } else {
-        result = param + ": parameter not recognized for ls";
+        result = cmd + ": command not found";
       }
-    } else if (cmd.equals("du")) {
-      result = fs.du(comp[1].trim());
-    } else if (cmd.equals("cat")) {
-      result = fs.cat(comp[1].trim());
-    } else {
-      result = cmd + ": command not found";
+    } catch (Exception e) {
+      result = "Error: "+e.getMessage();
     }
 
     return result;
