@@ -17,15 +17,15 @@ public class DriverTest extends TestCase {
   
   class TestFs implements FileSystem {
 
-    public String mkdir(String path) {
+    public void mkdir(String path) {
         return "";
     }
 
-    public String touch(String path) {
+    public void touch(String path) {
         return "";
     }
 
-    public String append(String path, String data) {
+    public void append(String path, String data) {
         return "";
     }
 
