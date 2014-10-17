@@ -18,17 +18,17 @@ public class MiniFs implements FileSystem {
   }
   
   @Override
-  public String mkdir(String path) {
+  public void mkdir(String path) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
   @Override
-  public String touch(String path) {
+  public void touch(String path) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
   @Override
-  public String append(String path, String data) {
+  public void append(String path, String data) {
     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
   }
 
